@@ -1,23 +1,22 @@
-// import logo from '../public/images/camera.svg';
+
 import './App.css';
+import { Button } from 'react-bootstrap';
+import MainMenu from './components/MainMenu';
+import Top from './components/Top';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="./images/camera.svg" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='Header'>
+        <Top />
+
+      </div>
+
+      <div className='menu-Container'>
+        <MainMenu />
+      </div>
+
     </div>
   );
 }
