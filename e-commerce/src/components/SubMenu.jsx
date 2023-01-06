@@ -1,21 +1,7 @@
 import React from 'react'
-import { Children } from 'react';
-import { Nav, NavDropdown, NavLink } from "react-bootstrap"
-import categories from '../data/menus'
-// import Browse from './Browse'
-
+import { NavDropdown, NavLink } from "react-bootstrap"
 
 const SubMenu = (props) => {
-
-    // const BrowseCategories = categories.map(Browse => {
-    //     return (
-    //         <Browse
-    //             title={Browse.title}
-    //             children={Browse.children}
-    //         />
-    //     )
-    // })
-
     const subMenu =
         props.children.length > 0 ? (
             <NavDropdown title={props.title}>
@@ -24,7 +10,6 @@ const SubMenu = (props) => {
                         <NavDropdown.Item>{child.title}</NavDropdown.Item>
                     )
                 })}
-
             </NavDropdown>
         ) : (
             <NavLink>{props.title}</NavLink>
@@ -32,15 +17,8 @@ const SubMenu = (props) => {
 
     return (
         <div>
-            <Nav className="me-auto">
-
-                {/* {BrowseCategories} */}
-                {subMenu}
-            </Nav>
-
+            {subMenu}
         </div>
-
-
     );
 };
 

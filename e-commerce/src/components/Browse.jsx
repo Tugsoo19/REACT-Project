@@ -1,13 +1,8 @@
 import React from 'react'
-import { Children } from 'react';
 import { Nav, NavDropdown, NavLink } from "react-bootstrap"
 
-
-
-const browse = (props) => {
-
-
-    const Browse =
+const BrowserCategories = (props) => {
+    const data =
         props.children.length > 0 ? (
             <NavDropdown title={props.title}>
                 {props.children.map(child => {
@@ -21,19 +16,13 @@ const browse = (props) => {
             <NavLink>{props.title}</NavLink>
         );
 
+
     return (
-        <div>
-            <Nav className="me-auto">
-
-               {Browse}
-               
-            </Nav>
-
-        </div>
-
-
+        <Nav >
+            {data}
+        </Nav>
     );
 };
 
-export default browse
+export default BrowserCategories
 

@@ -7,3 +7,70 @@
   background-color: #003F62;
   color: white;
 }
+
+.top-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  gap: 400px;
+
+}
+
+.top-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.Container {
+  padding-bottom: 20px;
+  padding-top: 30px;
+
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  height: 394px;
+  gap: 200px;
+
+}
+
+.carousel-left {
+  margin-top: 100px;
+}
+
+.carousel-title {
+  color: #1B5A7D;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 64px;
+}
+
+.carousel-image {
+  width: 331px;
+  height: 250px;
+}
+
+.carousel-button1 {
+  background-color: #EDA415;
+  border-radius: 20px;
+  width: 144px;
+  height: 61px;
+  color: white;
+  border-style: none;
+  margin-right: 20px;
+}
+
+.carousel-button2 {
+  border-color: #316887;
+  border-radius: 20px;
+  width: 144px;
+  height: 61px;
+  color: #316887;
+  background-color: white;
+  
+  
+}
