@@ -49,6 +49,7 @@ function App() {
           <div className="row mx-auto">{secondCarousel}</div>
           <div className="row mx-auto">{secondCarousel}</div>
           <div className="row mx-auto">{secondCarousel}</div>
+          <div className="row mx-auto">{secondCarousel}</div>
           //dfgkjdhgjd//
         </AliceCarousel>
       </div>
