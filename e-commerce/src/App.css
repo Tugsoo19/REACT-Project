@@ -23,7 +23,7 @@
   gap: 2rem;
 }
 
-/* .Container {
+.Container {
   padding-bottom: 20px;
   padding-top: 30px;
 
@@ -36,9 +36,9 @@
   height: 394px;
   gap: 200px;
 
-} */
+}
 
-/* .carousel-left {
+.carousel-left {
   margin-top: 100px;
 }
 
@@ -54,7 +54,7 @@
 .carousel-image {
   width: 331px;
   height: 250px;
-} */
+}
 
 .carousel-button1 {
   background-color: #EDA415;
@@ -80,3 +80,4 @@
 .alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
   display: none;
 }
+

@@ -1,4 +1,4 @@
-const miniCarousel = [
+const miniCarData = [
     {
       image: "images/speaker.png",
       title: "Speaker",
@@ -16,5 +16,5 @@ const miniCarousel = [
       },
   ];
   
-  export default miniCarousel;
+  export default miniCarData;
   

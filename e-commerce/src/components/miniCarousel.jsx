@@ -1,4 +1,4 @@
-function miniCarousel(props) {
+function MiniCarousel(props) {
     return(
         <div className="mini col p-4">
             <div className="row">
@@ -10,4 +10,4 @@ function miniCarousel(props) {
     )
 }
 
-export default miniCarousel;
+export default MiniCarousel;

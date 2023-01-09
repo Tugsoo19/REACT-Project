@@ -3,7 +3,9 @@ import MainMenu from "./components/MainMenu";
 import Top from "./components/Top";
 import AliceCarousel from "react-alice-carousel";
 import carouselData from "./data/carousel";
-import miniCarousel from "./components/miniCarousel";
+import MiniCarousel from "./components/MiniCarousel";
+import miniCarData from "./data/miniCarData";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -23,9 +25,9 @@ function App() {
     );
   });
 
-  const secondCarousel = miniCarousel.map((props) => {
+  const secondCarousel = miniCarData.map((props) => {
     return (
-      <miniCarousel 
+      <MiniCarousel 
         image = {props.image}
         title = {props.title}
       />
@@ -40,17 +42,19 @@ function App() {
       <div className="menu-Container">
         <MainMenu />
       </div>
-
-      <AliceCarousel autoPlay autoPlayInterval="3000">
-        {images}
-      </AliceCarousel>
+      <div className="FirstCarousel">
+        <AliceCarousel autoPlay autoPlayInterval="3000">
+          {images}
+        </AliceCarousel>
+      </div>
+      
       <div className="inner-box my-5">
         <AliceCarousel>
           <div className="row mx-auto">{secondCarousel}</div>
           <div className="row mx-auto">{secondCarousel}</div>
           <div className="row mx-auto">{secondCarousel}</div>
-          <div className="row mx-auto">{secondCarousel}</div>
-          //dfgkjdhgjd//
+          
+          
         </AliceCarousel>
       </div>
     </div>
