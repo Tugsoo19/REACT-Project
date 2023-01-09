@@ -5,8 +5,10 @@ import AliceCarousel from "react-alice-carousel";
 import carouselData from "./data/carousel";
 import MiniCarousel from "./components/MiniCarousel";
 import miniCarData from "./data/miniCarData";
-
 import "bootstrap/dist/css/bootstrap.min.css";
+import PopularTabs from "./components/PopularTab";
+import popular from "./data/popularProducts";
+import PopularProdsFunc from "./components/PopularProds";
 
 function App() {
   const images = carouselData.map((data) => {
@@ -27,9 +29,22 @@ function App() {
 
   const secondCarousel = miniCarData.map((props) => {
     return (
-      <MiniCarousel 
-        image = {props.image}
-        title = {props.title}
+      <MiniCarousel
+        image={props.image}
+        title={props.title}
+        items={props.items}
+      />
+    );
+  });
+
+  const popularProds = popular.map((el) => {
+    return (
+      <PopularProdsFunc
+        image={el.image}
+        title={el.title}
+        price={el.price}
+        icon1={el.icon1}
+        icon2={el.icon2}
       />
     );
   });
@@ -47,16 +62,20 @@ function App() {
           {images}
         </AliceCarousel>
       </div>
-      
-      <div className="inner-box my-5">
+
+      <div className="inner-box">
         <AliceCarousel>
-          <div className="row mx-auto">{secondCarousel}</div>
-          <div className="row mx-auto">{secondCarousel}</div>
-          <div className="row mx-auto">{secondCarousel}</div>
-          
-          
+          {secondCarousel}        
         </AliceCarousel>
       </div>
+      <div className="PopularTab d-flex justify-content-around mx-auto">
+        Popular products
+        <PopularTabs />
+      </div>
+      <AliceCarousel>
+        <div className="d-flex gap-3 my-4 mx-auto">{popularProds}</div>
+        <div className="d-flex gap-3 my-4">{popularProds}</div>
+      </AliceCarousel>
     </div>
   );
 }

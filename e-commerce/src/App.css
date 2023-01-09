@@ -2,6 +2,7 @@
   text-align: center;
   max-width: 1440px;
   align-items: center;
+  margin: 0 auto;
 }
 
 
@@ -26,7 +27,26 @@
 .Container {
   padding-bottom: 20px;
   padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
 
+
+}
+
+.searchField input {
+  width: 438px ;
+}
+
+.searchField input, button{
+  overflow: visible;
+  position: relative;
+  cursor: pointer;
+  padding:17.5px ;
+}
+
+.login-left {
+  display: flex;
+  gap: 20px;
 }
 
 .carousel {
@@ -40,6 +60,7 @@
 
 .carousel-left {
   margin-top: 100px;
+  position: relative;
 }
 
 .carousel-title {
@@ -77,7 +98,56 @@
   
 }
 
-.alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
+.FirstCarousel .alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
   display: none;
 }
 
+
+.FirstCarousel .alice-carousel .alice-carousel__dots {
+  position: absolute;
+  bottom: 150px;
+  left: 320px;
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #EDA415;
+  height: 16px;
+  width: 16px;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #e0e4fb;
+}
+
+/* .inner-box .alice-carousel .alice-carousel__dots {
+  display: none;
+} */
+
+.inner-box .alice-carousel .alice-carousel__prev-btn-item {
+  position: absolute;
+  left: 0;
+  bottom: 280px;
+  background-color: #EAEAEA;
+  border-radius: 500px;
+  width: 37px;
+  height: 37px;
+  align-items: center;
+  
+}
+
+.inner-box .alice-carousel .alice-carousel__next-btn {
+  position: absolute;
+  right: 0;
+  bottom: 280px;
+  background-color: #9f2a2a;
+  border-radius: 500px;
+  width: 37px;
+  height: 37px;
+  align-items: center;
+  color: #e0e4fb;
+  
+}
