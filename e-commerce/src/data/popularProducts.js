@@ -4,7 +4,8 @@ const popular = [
         title: "Camera",
         price: "$11.7",
         icon1: 'images/like2.png',
-        icon2: "images/shopcart2.png"
+        icon2: "images/shopcart2.png",
+        stars: 1
 
     },
     {
@@ -12,7 +13,8 @@ const popular = [
         title: "Wireless headphones",
         price: "$11.7",
         icon1: 'images/like2.png',
-        icon2: "images/shopcart2.png"
+        icon2: "images/shopcart2.png",
+        stars: 2
 
     },
     {
@@ -20,7 +22,8 @@ const popular = [
         title: "Tablet as a laptop",
         price: "$11.7",
         icon1: 'images/like2.png',
-        icon2: "images/shopcart2.png"
+        icon2: "images/shopcart2.png",
+        stars: 3
 
     },
     {
@@ -28,7 +31,8 @@ const popular = [
         title: "Play game",
         price: "$11.7",
         icon1: 'images/like2.png',
-        icon2: "images/shopcart2.png"
+        icon2: "images/shopcart2.png",
+        stars: 4
 
     },
 ];
