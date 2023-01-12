@@ -10,6 +10,7 @@ import PopularTabs from "./components/PopularTab";
 import popular from "./data/popularProducts";
 import PopularProdsFunc from "./components/PopularProds";
 import Carousel from 'react-bootstrap/Carousel';
+import SaleBanner from "./components/SaleBanner";
 
 function App() {
   const images = carouselData.map((data) => {
@@ -63,10 +64,13 @@ function App() {
         Popular products
         <PopularTabs />
       </div>
-      <AliceCarousel>
+      <AliceCarousel className="mx-auto">
         <div className="d-flex gap-3 my-4 mx-auto">{popularProds}</div>
-        {/* <div className="d-flex gap-3 my-4">{popularProds}</div> */}
+        <div className="d-flex gap-3 my-4">{popularProds}</div>
       </AliceCarousel>
+      <div>
+        <SaleBanner/>
+      </div>
     </div>
   );
 }

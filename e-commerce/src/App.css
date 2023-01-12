@@ -1,3 +1,7 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
   max-width: 1440px;
@@ -65,7 +69,7 @@
 
 .carousel-title {
   color: #1B5A7D;
-  font-family: 'Poppins';
+  
   font-style: normal;
   font-weight: 700;
   font-size: 43px;
@@ -123,4 +127,36 @@
 .miniImage {
   width: 150px;
   height: 150px;
+}
+
+.sale {
+  background-image: url(../public/images/sale-banner.png);
+  height: 417px;
+  background-size: cover;
+  position: relative;
+}
+
+.sale-text{
+  top: 91px;
+  right: 149px;
+  position: absolute;
+}
+
+.sale button {
+  background-color: orange;
+  border-radius: 20px ;
+  color: white;
+  border-style: none;
+  padding: 10px 30px;
+}
+
+.sale h1 {
+  color: #2E8FC5;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.sale p {
+  font-size: 14px;
+  color: white;
 }
