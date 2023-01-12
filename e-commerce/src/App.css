@@ -3,7 +3,7 @@ body {
 }
 
 .App {
-  text-align: center;
+ 
   max-width: 1440px;
   align-items: center;
   margin: 0 auto;
@@ -92,7 +92,7 @@ body {
 }
 
 .carousel-button2 {
-  border-color: #316887;
+  border: 1px solid #316887;
   border-radius: 20px;
   width: 144px;
   height: 61px;
@@ -102,8 +102,15 @@ body {
   
 }
 
-.FirstCarousel .alice-carousel__prev-btn-wrapper, .alice-carousel__next-btn-wrapper {
+.FirstCarousel .alice-carousel__prev-btn{
   display: none;
+}
+
+.FirstCarousel .alice-carousel__next-btn  {
+ display: none;
+}
+.FirstCarousel .alice-carousel__next-btn-wrapper {
+ display: none;
 }
 
 
@@ -111,11 +118,12 @@ body {
   position: absolute;
   bottom: 150px;
   left: 320px;
+  
 }
 
 .miniCarousel {
   display: flex;
-  border: 2px solid gray;
+  border: 1px solid #d0cbcb;
   border-radius: 30px;
   margin: 5px;
   justify-content: center;
@@ -129,17 +137,78 @@ body {
   height: 150px;
 }
 
+.popular {
+  width: 350px;
+  height: 350px;
+  
+}
+
+.pop-items {
+  flex-wrap: wrap;
+}
+
+.pop-title {
+  font-size: 17px;
+  font-weight: 500;
+  color: #003F62;
+}
+
+.pop-price {
+  font-size: 17px;
+  font-weight: 600;
+  color: #4A4A4A;
+}
+.pop-bottom {
+  position: relative;
+}
+.pop-cart {
+  height: 42px;
+  width: 45px;
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+}
+
+.pop-top {
+  position: relative;
+}
+.pop-like {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.pop-image {
+  width: 180px;
+  height: 170px;
+  padding: 5px;
+}
+
+.popular-prods .alice-carousel__prev-btn{
+  display: none;
+}
+
+.popular-prods .alice-carousel__next-btn  {
+ display: none;
+}
+.popular-prods .alice-carousel__next-btn-wrapper {
+ display: none;
+}
+
 .sale {
   background-image: url(../public/images/sale-banner.png);
   height: 417px;
   background-size: cover;
   position: relative;
+  border-radius: 20px;
+  margin: 60px 0;
 }
 
 .sale-text{
   top: 91px;
   right: 149px;
   position: absolute;
+  text-align: center;
 }
 
 .sale button {
@@ -157,6 +226,77 @@ body {
 }
 
 .sale p {
-  font-size: 14px;
+  font-size: 18px;
   color: white;
+}
+
+.speaker-text button{
+  background-color:#87BCD9;
+  border-radius: 20px;
+  border-style: none;
+  width: 205px;
+}
+
+.warranty {
+  background-color: #E2F4FF;
+  height: 155px;
+  border-radius: 20px;
+  margin: 100px 0;
+
+}
+
+.warranty .d-flex {
+  margin-left: 60px;
+}
+
+.warranty img {
+  width: 47px;
+  height: 56px;
+  margin-top: 50px;
+}
+.warranty-text {
+  width: 350px;
+  align-self: center;
+  color: #003F62;
+  justify-content: center;
+}
+
+.warranty-text p {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+}
+.warranty-text a {
+  font-weight: 400;
+}
+
+.profiles {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.profiles p {
+  background-color: #E2F4FF;
+  color: #003F62;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 19px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.profiles a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 20px;
+  color: #003F62;
+}
+
+.logos {
+  background-color: #E2F4FF;
+  height: 136px;
+  padding: 47px;
+
 }

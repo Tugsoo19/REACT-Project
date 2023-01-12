@@ -1,33 +1,23 @@
-import { useState } from 'react';
-import { Rating } from 'react-simple-star-rating'
-
+import { Rating } from "react-simple-star-rating";
 
 export default function PopularProdsFunc(props) {
-
-  
-  
-
   return (
-    <div className="">
-      <div className="border rounded">
-        <div className="d-flex">
-          <img src={props.image} className="w-50"></img>
-          <a>
-            <img src={props.icon1}></img>
-          </a>
-
+    <div className="popular">
+      <div className="border rounded-5">
+        <div className="pop-top d-flex justify-content-center">
+          <img src={props.image} className="pop-image"></img>
+          <img src={props.icon1} className="pop-like"></img>
         </div>
 
-        <p>{props.title}</p>
-        <div className="d-flex justify-content-around">
-          <p>{props.price}</p>
-          <img src={props.icon2}></img>
+        <div className="pop-bottom d-flex justify-content-between p-3">
+          <div>
+            <p className="pop-title px-2">{props.title}</p>
+            <p className="pop-price px-2">{props.price}</p>
+            <Rating initialValue={props.stars} />
+          </div>
+
+          <img src={props.icon2} className="pop-cart"></img>
         </div>
-
-        <Rating
-          initialValue={props.stars}
-
-        />
       </div>
     </div>
   );

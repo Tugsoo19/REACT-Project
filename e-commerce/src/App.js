@@ -4,13 +4,15 @@ import Top from "./components/Top";
 import AliceCarousel from "react-alice-carousel";
 import carouselData from "./data/carousel";
 import MiniCarousel from "./components/MiniCarousel";
-import miniCarData from "./data/miniCarData";
+import MiniCarData from "./data/miniCarData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PopularTabs from "./components/PopularTab";
-import popular from "./data/popularProducts";
+import { popular } from "./data/popularProducts";
 import PopularProdsFunc from "./components/PopularProds";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 import SaleBanner from "./components/SaleBanner";
+import ThreeProds from "./components/ThreeProducts";
+import WarrantyProfilesBrand from "./components/WarrantyProfilesBrand";
 
 function App() {
   const images = carouselData.map((data) => {
@@ -29,7 +31,6 @@ function App() {
     );
   });
 
-
   const popularProds = popular.map((el) => {
     return (
       <PopularProdsFunc
@@ -38,7 +39,7 @@ function App() {
         price={el.price}
         icon1={el.icon1}
         icon2={el.icon2}
-        stars= {el.stars}
+        stars={el.stars}
       />
     );
   });
@@ -58,19 +59,30 @@ function App() {
       </div>
 
       <div className="inner-box">
-        <MiniCarousel />       
+        <MiniCarousel />
       </div>
       <div className="PopularTab d-flex justify-content-around mx-auto">
-        Popular products
+        <a>Popular products</a>
         <PopularTabs />
       </div>
-      <AliceCarousel className="mx-auto">
-        <div className="d-flex gap-3 my-4 mx-auto">{popularProds}</div>
-        <div className="d-flex gap-3 my-4">{popularProds}</div>
-      </AliceCarousel>
-      <div>
-        <SaleBanner/>
+      <div className="popular-prods">
+        <AliceCarousel>
+          <div className="pop-items d-flex my-4 justify-content-between">
+            {popularProds}
+          </div>
+          <div className="pop-items d-flex my-4 justify-content-between">
+            {popularProds}
+          </div>
+          <div className="pop-items d-flex my-4 justify-content-between">
+            {popularProds}
+          </div>
+        </AliceCarousel>
       </div>
+
+      <SaleBanner />
+
+      <ThreeProds />
+      <WarrantyProfilesBrand/>
     </div>
   );
 }

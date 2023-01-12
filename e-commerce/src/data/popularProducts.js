@@ -35,6 +35,69 @@ const popular = [
         stars: 4
 
     },
+    {
+        image: "images/camera3.png",
+        title: "DSLR camera",
+        price: "$11.7",
+        icon1: 'images/like2.png',
+        icon2: "images/shopcart2.png",
+        stars: 1
+
+    },
+    {
+        image: "images/bigspeaker2.png",
+        title: "JBL bar 2.1deep bass",
+        price: "$11.7",
+        icon1: 'images/like2.png',
+        icon2: "images/shopcart2.png",
+        stars: 2
+
+    },
+    {
+        image: "images/mini_laptop.png",
+        title: "Tablet as a laptop",
+        price: "$11.7",
+        icon1: 'images/like2.png',
+        icon2: "images/shopcart2.png",
+        stars: 3
+
+    },
+    {
+        image: "images/play-game.png",
+        title: "Play game",
+        price: "$11.7",
+        icon1: 'images/like2.png',
+        icon2: "images/shopcart2.png",
+        stars: 4
+
+    },
+
 ];
 
-export default popular;
+const threeProducts = [
+   
+    {
+        image: "images/mini_laptop.png",
+        title: "Tablet as a laptop",
+        price: "$11.7",
+        stars: 3
+    },
+    {
+        image: "images/play-game.png",
+        title: "Play game",
+        price: "$11.7",
+        stars: 4
+    },
+]
+
+const speakerData = [
+    {
+        image: "images/big-speaker.png",
+        title: "JBL bar 2.1deep bass",
+        price: "$11.7",
+        stars: 2
+
+    },
+]
+
+export {popular, threeProducts, speakerData};

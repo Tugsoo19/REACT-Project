@@ -1,10 +1,5 @@
-import AliceCarousel from "react-alice-carousel"
-
-import { ArrowLeft } from 'react-bootstrap-icons'
-import { ArrowRight } from 'react-bootstrap-icons'
+import AliceCarousel from "react-alice-carousel";
 import sliderData from "../data/sliderData";
-
-
 
 // const items = miniCarData.map(data => {
 //   console.log(data)
@@ -26,33 +21,30 @@ import sliderData from "../data/sliderData";
 //   )
 // })
 
-const items = sliderData.map(data => {
+const items = sliderData.map((data) => {
   return (
     <div className="miniCarousel">
-         <img src={data.image} role="presentation" className="miniImage" />
-         <div className="miniTitle">
-           <h4>{data.title}</h4>
-           <h6>{data.items}</h6>
-         </div>
-       </div>
-  )
-})
+      <img src={data.image} role="presentation" className="miniImage" />
+      <div className="miniTitle">
+        <h4>{data.title}</h4>
+        <h6>{data.items}</h6>
+      </div>
+    </div>
+  );
+});
 
 export default function MiniCarousel() {
   return (
     <div>
-      <ArrowLeft />
-      <AliceCarousel  items={items} disableButtonsControls={true} responsive={{
-        0: {
+      <AliceCarousel
+        items={items}
+        disableDotsControls={true}
+        responsive={{
+          0: {
             items: 3,
-        },
-        
-      }} />
-
-     
-      
-    
-      <ArrowRight />
+          },
+        }}
+      />
     </div>
-  )
+  );
 }
