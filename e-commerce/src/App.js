@@ -13,8 +13,13 @@ import Carousel from "react-bootstrap/Carousel";
 import SaleBanner from "./components/SaleBanner";
 import ThreeProds from "./components/ThreeProducts";
 import WarrantyProfilesBrand from "./components/WarrantyProfilesBrand";
+import { useState } from "react";
 
 function App() {
+  const [wishlist, setWishlist] = useState(0)
+ 
+  
+
   const images = carouselData.map((data) => {
     return (
       <div className="carousel">
@@ -40,6 +45,9 @@ function App() {
         icon1={el.icon1}
         icon2={el.icon2}
         stars={el.stars}
+        wishlist = {wishlist}
+        setWishlist = {setWishlist}
+        
       />
     );
   });
@@ -50,7 +58,7 @@ function App() {
         <Top />
       </div>
       <div className="menu-Container">
-        <MainMenu />
+        <MainMenu wishlist={wishlist} />
       </div>
       <div className="FirstCarousel">
         <AliceCarousel autoPlay autoPlayInterval="3000">

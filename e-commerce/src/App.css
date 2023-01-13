@@ -300,3 +300,17 @@ body {
   padding: 47px;
 
 }
+
+.wish {
+  position: absolute;
+  width: 400px;
+  right: 50px;
+  background-color: #87BCD9;
+}
+
+.liked {
+  position: absolute;
+  color: red;
+  top: 26.5px;
+  right: 26.5px;
+}

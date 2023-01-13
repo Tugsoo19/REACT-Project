@@ -5,8 +5,14 @@ import { menus, categories } from "../data/menus";
 import Badge from "react-bootstrap/Badge";
 import BrowseCategories from "./Browse";
 import Nav from "react-bootstrap/Nav";
+import { useState } from "react";
+import { popular } from "../data/popularProducts";
+import PopularProdsFunc from "./PopularProds";
 
-export default function MainMenu() {
+export default function MainMenu(props) {
+
+
+  const [show, setShow] = useState(false);
 
   const browseMenu = categories.map((el) => {
     return <BrowseCategories title={el.title} children={el.children} />;
@@ -38,11 +44,19 @@ export default function MainMenu() {
               <img src="images/user.svg"></img>
               <a>Sign in</a>
             </div>
-            <div>
-              <img src="images/like.svg"></img>
+            <div onClick={() => setShow(true)}>
+              <img src="images/like.svg" ></img>
+
               <Badge pill bg="warning">
-                0
+               {props.wishlist}
               </Badge>
+              {show ? <div className="wish border border-5 " >
+                <h5>Wishlist</h5>
+                
+                <hr></hr>
+                <button onClick={() => setShow(false)}>Close</button>
+                
+              </div> : ""}
             </div>
             <div>
               <img src="images/shopping-cart.svg"></img>

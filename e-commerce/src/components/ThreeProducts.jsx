@@ -38,8 +38,8 @@ const speaker = speakerData.map((el) => {
 export default function ThreeProds() {
   return (
     <div className="d-flex justify-content-space m-2 gap-2">
-      <div className="col-7">{speaker}</div>
-      <div className="col-5 align-items-center">{items}</div>
+      <div className="col-md-7 col-sm">{speaker}</div>
+      <div className="col-md-5 col-sm align-items-center">{items}</div>
     </div>
   );
 }
