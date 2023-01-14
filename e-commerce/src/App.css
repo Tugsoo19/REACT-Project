@@ -1,17 +1,15 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
- 
   max-width: 1440px;
   align-items: center;
   margin: 0 auto;
 }
 
-
 .MainMenu {
-  background-color: #003F62;
+  background-color: #003f62;
   color: white;
 }
 
@@ -20,7 +18,6 @@ body {
   justify-content: space-between;
   margin: 20px;
   gap: 400px;
-
 }
 
 .top-right {
@@ -29,23 +26,42 @@ body {
 }
 
 .Container {
-  padding-bottom: 20px;
-  padding-top: 30px;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
-
-
+  align-items: center;
 }
 
 .searchField input {
-  width: 438px ;
+  width: 306px;
+  height: 56px;
+  border-radius: 20px 0 0 20px;
 }
 
-.searchField input, button{
-  overflow: visible;
-  position: relative;
+.searchField input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Poppins", sans-serif;
+  color: #292D32;
+  padding-left: 20px;
+}
+.searchField button {
+  background-color: #eda415;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
   cursor: pointer;
-  padding:17.5px ;
+  padding: 17.5px;
+  width: 132px;
+  height: 56px;
+  font-weight: 600;
+}
+
+.menu .return {
+  font-size: 16px;
+  font-weight: 700;
+  color: #003f62;
 }
 
 .login-left {
@@ -59,7 +75,6 @@ body {
   margin: 30px auto;
   height: 394px;
   gap: 200px;
-
 }
 
 .carousel-left {
@@ -68,8 +83,8 @@ body {
 }
 
 .carousel-title {
-  color: #1B5A7D;
-  
+  color: #1b5a7d;
+
   font-style: normal;
   font-weight: 700;
   font-size: 43px;
@@ -82,7 +97,7 @@ body {
 }
 
 .carousel-button1 {
-  background-color: #EDA415;
+  background-color: #eda415;
   border-radius: 20px;
   width: 144px;
   height: 61px;
@@ -92,33 +107,28 @@ body {
 }
 
 .carousel-button2 {
-  border: 1px solid #316887;
   border-radius: 20px;
   width: 144px;
   height: 61px;
   color: #316887;
   background-color: white;
-  
-  
 }
 
-.FirstCarousel .alice-carousel__prev-btn{
+.FirstCarousel .alice-carousel__prev-btn {
   display: none;
 }
 
-.FirstCarousel .alice-carousel__next-btn  {
- display: none;
+.FirstCarousel .alice-carousel__next-btn {
+  display: none;
 }
 .FirstCarousel .alice-carousel__next-btn-wrapper {
- display: none;
+  display: none;
 }
-
 
 .FirstCarousel .alice-carousel .alice-carousel__dots {
   position: absolute;
   bottom: 150px;
   left: 320px;
-  
 }
 
 .miniCarousel {
@@ -128,8 +138,7 @@ body {
   margin: 5px;
   justify-content: center;
   align-items: center;
-  gap: 20px
-  
+  gap: 20px;
 }
 
 .miniImage {
@@ -137,10 +146,30 @@ body {
   height: 150px;
 }
 
+/* popular product tab  */
+
+.nav .nav-link {
+  color: #1b5a7d ;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 30px ;
+}
+
+/* .nav-pills .nav-link.active{
+  color: #1b5a7d ;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 30px ;
+  background-color: none;
+} */
+
+/* popular products */
+
 .popular {
   width: 350px;
   height: 350px;
-  
 }
 
 .pop-items {
@@ -150,13 +179,13 @@ body {
 .pop-title {
   font-size: 17px;
   font-weight: 500;
-  color: #003F62;
+  color: #003f62;
 }
 
 .pop-price {
   font-size: 17px;
   font-weight: 600;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 .pop-bottom {
   position: relative;
@@ -167,7 +196,7 @@ body {
   position: absolute;
   bottom: 50px;
   right: 20px;
-  background-color:#EDA415;
+  background-color: #eda415;
   border-radius: 491px;
   color: white;
   padding: 5px;
@@ -177,7 +206,7 @@ body {
   position: relative;
 }
 .pop-like {
-  background-color: #B3D4E5;
+  background-color: #b3d4e5;
   border-radius: 122.4px;
   position: absolute;
   top: 20px;
@@ -193,15 +222,15 @@ body {
   padding: 5px;
 }
 
-.popular-prods .alice-carousel__prev-btn{
+.popular-prods .alice-carousel__prev-btn {
   display: none;
 }
 
-.popular-prods .alice-carousel__next-btn  {
- display: none;
+.popular-prods .alice-carousel__next-btn {
+  display: none;
 }
 .popular-prods .alice-carousel__next-btn-wrapper {
- display: none;
+  display: none;
 }
 
 .sale {
@@ -213,7 +242,7 @@ body {
   margin: 60px 0;
 }
 
-.sale-text{
+.sale-text {
   top: 91px;
   right: 149px;
   position: absolute;
@@ -222,14 +251,14 @@ body {
 
 .sale button {
   background-color: orange;
-  border-radius: 20px ;
+  border-radius: 20px;
   color: white;
   border-style: none;
   padding: 10px 30px;
 }
 
 .sale h1 {
-  color: #2E8FC5;
+  color: #2e8fc5;
   font-weight: 700;
   margin: 15px 0;
 }
@@ -239,19 +268,18 @@ body {
   color: white;
 }
 
-.speaker-text button{
-  background-color:#87BCD9;
+.speaker-text button {
+  background-color: #87bcd9;
   border-radius: 20px;
   border-style: none;
   width: 205px;
 }
 
 .warranty {
-  background-color: #E2F4FF;
+  background-color: #e2f4ff;
   height: 155px;
   border-radius: 20px;
   margin: 100px 0;
-
 }
 
 .warranty .d-flex {
@@ -266,7 +294,7 @@ body {
 .warranty-text {
   width: 350px;
   align-self: center;
-  color: #003F62;
+  color: #003f62;
   justify-content: center;
 }
 
@@ -285,8 +313,8 @@ body {
 }
 
 .profiles p {
-  background-color: #E2F4FF;
-  color: #003F62;
+  background-color: #e2f4ff;
+  color: #003f62;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
@@ -300,21 +328,20 @@ body {
   font-size: 16px;
   line-height: 24px;
   margin-left: 20px;
-  color: #003F62;
+  color: #003f62;
 }
 
 .logos {
-  background-color: #E2F4FF;
+  background-color: #e2f4ff;
   height: 136px;
   padding: 47px;
-
 }
 
 .wish {
   position: absolute;
   width: 400px;
   right: 50px;
-  background-color: #87BCD9;
+  background-color: #87bcd9;
 }
 
 .liked {
@@ -330,20 +357,83 @@ body {
 .section-title {
   font-size: 25px;
   font-weight: 600;
-  color: #1B5A7D;
+  color: #1b5a7d;
   text-decoration: none;
 }
 
 .more-link {
   font-size: 20px;
   font-weight: 500;
-  color: #1B5A7D;
+  color: #1b5a7d;
   text-decoration: none;
 }
 
-.latest-rightside p{
+.latest-rightside p {
   font-size: 16px;
   font-weight: 500;
   line-height: 23px;
-  color:#003F62
+  color: #003f62;
+}
+
+.footer {
+  background-color: #e2f4ff;
+}
+
+.footer-top a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1b5a7d;
+  line-height: 44px;
+}
+
+.footer-top .input-group {
+  background-color: #eda415;
+  height: 63px;
+  border-radius: 20px;
+  padding: 0 20px;
+  width: 388px;
+}
+
+.input-group .input {
+  border-style: none;
+  border: none;
+  background: none;
+}
+.input-group .input::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-top button {
+  border-style: none;
+  border: none;
+  background: #eda415;
+  border-radius: 20px;
+}
+
+.footerleft p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1b5a7d;
+  width: 190px;
+  margin: 40px 0;
+}
+
+.footerright h5 {
+  font-weight: 600;
+  color: #1b5a7d;
+}
+
+.footerright li {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1b5a7d;
+  padding-bottom: 15px;
+}
+
+.footerright li::marker {
+  color: #d9d9d9;
 }

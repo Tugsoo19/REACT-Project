@@ -6,12 +6,8 @@ import Badge from "react-bootstrap/Badge";
 import BrowseCategories from "./Browse";
 import Nav from "react-bootstrap/Nav";
 import { useState } from "react";
-import { popular } from "../data/popularProducts";
-import PopularProdsFunc from "./PopularProds";
 
 export default function MainMenu(props) {
-
-
   const [show, setShow] = useState(false);
 
   const browseMenu = categories.map((el) => {
@@ -45,18 +41,21 @@ export default function MainMenu(props) {
               <a>Sign in</a>
             </div>
             <div onClick={() => setShow(true)}>
-              <img src="images/like.svg" ></img>
+              <img src="images/like.svg"></img>
 
               <Badge pill bg="warning">
-               {props.wishlist}
+                {props.wishlist}
               </Badge>
-              {show ? <div className="wish border border-5 " >
-                <h5>Wishlist</h5>
-                
-                <hr></hr>
-                <button onClick={() => setShow(false)}>Close</button>
-                
-              </div> : ""}
+              {show ? (
+                <div className="wish border border-5 ">
+                  <h5>Wishlist</h5>
+
+                  <hr></hr>
+                  <button onClick={() => setShow(false)}>Close</button>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             <div>
               <img src="images/shopping-cart.svg"></img>
@@ -67,11 +66,11 @@ export default function MainMenu(props) {
           </div>
         </div>
       </div>
-      <Navbar bg="light" className="gap-5 p-0" expand="lg-2 md-6">
-        <div className="bg-warning ms-5 p-3 text-white">{browseMenu}</div>
-        <div className="d-flex gap-5">{subMenus}</div>
+      <Navbar bg="light" className="menu gap-5 p-0 pe-4" expand="lg-2 md-6">
+        <div className="browse bg-warning ms-5 p-3 text-white">{browseMenu}</div>
+        <div className="sub d-flex gap-5">{subMenus}</div>
 
-        <Nav.Link href="#deets">30 Days Free Return </Nav.Link>
+        <Nav.Link className="return" href="#deets">30 Days Free Return </Nav.Link>
       </Navbar>
     </div>
   );

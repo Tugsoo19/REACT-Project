@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function PopularTabs() {
   return (
-    <Nav variant="pills bg-none" defaultActiveKey="/Cameras" className='gap-3'>
+    <Nav  defaultActiveKey="/Cameras" className='gap-3'>
       <Nav.Item className='border rounded-5'>
         <Nav.Link href="/Cameras">Cameras</Nav.Link>
       </Nav.Item>

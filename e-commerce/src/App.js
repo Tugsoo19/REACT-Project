@@ -15,6 +15,7 @@ import ThreeProds from "./components/ThreeProducts";
 import WarrantyProfilesBrand from "./components/WarrantyProfilesBrand";
 import { useState } from "react";
 import LatestProdFunc from "./components/LatestProducts";
+import Footer from "./components/Footer";
 
 function App() {
   const [wishlist, setWishlist] = useState(0);
@@ -25,7 +26,7 @@ function App() {
         <div className="carousel-left">
           <p className="carousel-title">{data.title}</p>
           <button className="carousel-button1">{data.button1}</button>
-          <button className="carousel-button2">{data.button2}</button>
+          <button className="carousel-button2 border">{data.button2}</button>
         </div>
 
         <div className="carousel-image">
@@ -96,6 +97,7 @@ function App() {
         <div className="d-flex gap-3 ">{LatestProdFunc}</div>
         <div className="d-flex gap-3 ">{LatestProdFunc}</div>
       </AliceCarousel>
+      <Footer />
     </div>
   );
 }
