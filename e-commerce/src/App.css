@@ -17,7 +17,7 @@ body {
 
 .top-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 20px;
   gap: 400px;
 
@@ -162,20 +162,29 @@ body {
   position: relative;
 }
 .pop-cart {
-  height: 42px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   bottom: 50px;
   right: 20px;
+  background-color:#EDA415;
+  border-radius: 491px;
+  color: white;
+  padding: 5px;
 }
 
 .pop-top {
   position: relative;
 }
 .pop-like {
+  background-color: #B3D4E5;
+  border-radius: 122.4px;
   position: absolute;
   top: 20px;
   right: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
 }
 
 .pop-image {
@@ -311,6 +320,23 @@ body {
 .liked {
   position: absolute;
   color: red;
-  top: 26.5px;
-  right: 26.5px;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.section-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #1B5A7D;
+  text-decoration: none;
+}
+
+.more-link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1B5A7D;
+  text-decoration: none;
 }

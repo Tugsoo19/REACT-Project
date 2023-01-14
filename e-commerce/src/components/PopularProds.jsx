@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 // import {heart} from 'react-bootstrap-icons/dist/icons'
-import { AiFillHeart } from 'react-icons/ai';
+import { BsSuitHeartFill } from 'react-icons/bs';
+import {BsSuitHeart} from 'react-icons/bs'
+import {BiCart} from 'react-icons/bi'
 
 export default function PopularProdsFunc(props) {
   const [like, setLike] = useState(false)
@@ -14,12 +16,12 @@ export default function PopularProdsFunc(props) {
       <div className="border rounded-5">
         <div className="pop-top d-flex justify-content-center">
           <img src={props.image} className="pop-image"></img>
-          <img src={props.icon1} className="pop-like" onClick={() => {
+          <BsSuitHeart className="pop-like" onClick={() => {
             props.setWishlist(props.wishlist + 1)
             setLike(true)
 
-          }}></img>
-          {like ? <AiFillHeart className="liked" onClick={() => {
+          }}/>
+          {like ? <BsSuitHeartFill className="liked" onClick={() => {
             props.setWishlist(props.wishlist - 1)
             setLike(false)
           }} /> : ""}
@@ -32,7 +34,8 @@ export default function PopularProdsFunc(props) {
             <Rating initialValue={props.stars} />
           </div>
 
-          <img src={props.icon2} className="pop-cart"></img>
+          {/* <img src={props.icon2} className="pop-cart"></img> */}
+          <BiCart className="pop-cart"/>
 
         </div>
       </div>
