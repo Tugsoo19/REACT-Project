@@ -1,5 +1,5 @@
 import AliceCarousel from "react-alice-carousel";
-import sliderData from "../data/sliderData";
+import sliderData from "../../data/sliderData";
 
 // const items = miniCarData.map(data => {
 //   console.log(data)

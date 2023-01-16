@@ -1,5 +1,5 @@
 import { Rating } from "react-simple-star-rating";
-import { speakerData, threeProducts } from "../data/popularProducts";
+import { speakerData, threeProducts } from "../../data/popularProducts";
 
 const items = threeProducts.map((el) => {
   return (

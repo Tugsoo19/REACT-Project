@@ -19,6 +19,8 @@ export default function PopularProdsFunc(props) {
           <BsSuitHeart className="pop-like" onClick={() => {
             props.setWishlist(props.wishlist + 1)
             setLike(true)
+            
+            console.log(props.target.value);
 
           }}/>
           {like ? <BsSuitHeartFill className="liked" onClick={() => {

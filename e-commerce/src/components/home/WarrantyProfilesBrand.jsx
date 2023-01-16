@@ -1,5 +1,5 @@
 import AliceCarousel from "react-alice-carousel";
-import { brands, profiles, warranty } from "../data/warranty";
+import { brands, profiles, warranty } from "../../data/warranty";
 
 const delivery = warranty.map((el) => {
   return (

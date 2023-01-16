@@ -1,4 +1,4 @@
-import latestProdData from "../data/latest";
+import latestProdData from "../../data/latest";
 
 const LatestProdFunc = latestProdData.map((el) => {
   return (

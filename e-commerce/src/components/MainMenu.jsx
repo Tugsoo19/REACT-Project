@@ -6,6 +6,8 @@ import Badge from "react-bootstrap/Badge";
 import BrowseCategories from "./Browse";
 import Nav from "react-bootstrap/Nav";
 import { useState } from "react";
+import { Link } from 'react-router-dom'
+
 
 export default function MainMenu(props) {
   const [show, setShow] = useState(false);
@@ -37,7 +39,10 @@ export default function MainMenu(props) {
           </form>
           <div className="login-left">
             <div>
-              <img src="images/user.svg"></img>
+              <img src="images/user.svg" onClick={() => {
+              <Link to={'/signup'}></Link>
+
+            }}></img>
               <a>Sign in</a>
             </div>
             <div onClick={() => setShow(true)}>
@@ -49,6 +54,7 @@ export default function MainMenu(props) {
               {show ? (
                 <div className="wish border border-5 ">
                   <h5>Wishlist</h5>
+                  {props.addWishlist}
 
                   <hr></hr>
                   <button onClick={() => setShow(false)}>Close</button>
