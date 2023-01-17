@@ -24,7 +24,10 @@ export default function PopularProdsFunc(props) {
             const likedProduct = {
               productId: props.id,
               productImage : props.image,
-              isLiked: true
+              productTitle : props.title,
+              productPrice: props.price,
+              isLiked: true,
+
             }
             // console.log(likedProduct)
             // console.log(props.setWishlist)

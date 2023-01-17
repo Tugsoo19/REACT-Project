@@ -1,9 +1,9 @@
 import { Rating } from "react-simple-star-rating";
 import { speakerData, threeProducts } from "../../data/popularProducts";
 
-const items = threeProducts.map((el) => {
+const items = threeProducts.map((el, index) => {
   return (
-    <div className="d-flex border rounded-5 justify-content-between mb-2 p-3">
+    <div className="d-flex border rounded-5 justify-content-between mb-2 p-3" key={index}>
       <img src={el.image} className="speaker-right-img ms-3"></img>
 
       <div className="p-3">
@@ -15,9 +15,9 @@ const items = threeProducts.map((el) => {
   );
 });
 
-const speaker = speakerData.map((el) => {
+const speaker = speakerData.map((el, index) => {
   return (
-    <div className="d-flex border rounded-5 justify-content-around align-items-center m-2">
+    <div className="d-flex border rounded-5 justify-content-around align-items-center m-2" key={index}>
       <img src={el.image} className="speaker"></img>
 
       <div className="speaker-text p-3 ">

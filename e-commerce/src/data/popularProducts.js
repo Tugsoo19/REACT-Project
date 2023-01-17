@@ -10,7 +10,7 @@ const popular = [
 
     },
     {
-        image: "images/headphones.png",
+        image: "images/headphones.svg",
         title: "Wireless headphones",
         price: "$11.7",
         icon1: 'images/like2.png',
@@ -20,7 +20,7 @@ const popular = [
 
     },
     {
-        image: "images/mini_laptop.png",
+        image: "images/laptop.png",
         title: "Tablet as a laptop",
         price: "$11.7",
         icon1: 'images/like2.png',
@@ -30,7 +30,7 @@ const popular = [
 
     },
     {
-        image: "images/play-game.png",
+        image: "images/play-game.svg",
         title: "Play game",
         price: "$11.7",
         icon1: 'images/like2.png',
@@ -70,7 +70,7 @@ const popular = [
 
     },
     {
-        image: "images/play-game.png",
+        image: "images/play-game.svg",
         title: "Play game",
         price: "$11.7",
         icon1: 'images/like2.png',
@@ -91,7 +91,7 @@ const threeProducts = [
         stars: 3
     },
     {
-        image: "images/play-game.png",
+        image: "images/play-game.svg",
         title: "Play game",
         price: "$11.7",
         stars: 4

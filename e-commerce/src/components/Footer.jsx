@@ -4,9 +4,10 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 export default function Footer() {
-  const footerLeft = footer1.map((el) => {
+  const footerLeft = footer1.map((el, index) => {
     return (
-      <div className="footerleft">
+      
+      <div className="footerleft" key={index}>
         <img src={el.logo} className />
         <p>{el.address}</p>
         <hr />
@@ -19,9 +20,9 @@ export default function Footer() {
     );
   });
 
-  const footerRight = footer2.map((el) => {
+  const footerRight = footer2.map((el, index) => {
     return (
-      <div className="footerright">
+      <div className="footerright" key={index}>
         <h5>{el.title}</h5>
         <li>{el.li1}</li>
         <li>{el.li2}</li>
@@ -47,7 +48,7 @@ export default function Footer() {
           </Button>
         </InputGroup>
         <div className="phone d-flex gap-4 align-items-center">
-          <img src="images/headphone.svg"></img>
+          <img src="images/headphoneLogo.svg"></img>
           <p>
             Call us 24/7:
             <br />

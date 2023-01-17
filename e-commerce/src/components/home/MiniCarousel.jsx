@@ -21,9 +21,9 @@ import sliderData from "../../data/sliderData";
 //   )
 // })
 
-const items = sliderData.map((data) => {
+const items = sliderData.map((data, index) => {
   return (
-    <div className="miniCarousel">
+    <div className="miniCarousel" key={index}>
       <img src={data.image} role="presentation" className="miniImage" />
       <div className="miniTitle">
         <h4>{data.title}</h4>

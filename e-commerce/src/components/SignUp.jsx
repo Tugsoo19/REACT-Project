@@ -1,26 +1,36 @@
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+
 
 export default function SignUp() {
-  
-    return (
-        <div>
-            <h1>Sign up</h1>
-            <form>
-                <label htmlFor='name'>Name*</label>
-                <br/>
-                <input type='text' placeholder='Enter your name'></input>
-                <br />
-                <label htmlFor='email'>Email*:</label>
-                <br/>
-                <input type='email' name="email" placeholder='Enter your email'></input>
-                <br />
-                <label htmlFor='password'>Password:</label>
-                <br/>
-                <input name="password" type='password' placeholder='Create a password'></input>
-                <br />
+  return (
+    <div className="signPage">
+      <h1>Sign up</h1>
 
-                <br />
-                <button>Create account</button>
-            </form>
-        </div>
-    )
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name*</Form.Label>
+          <Form.Control type="email" placeholder="Enter your name" />
+          <br/>
+          <Form.Label>Email*</Form.Label>
+          <Form.Control type="email" placeholder="Enter your email" />
+          <br/>
+          <Form.Label>Password*</Form.Label>
+          <Form.Control type="email" placeholder="Create a password" />
+          <Form.Text className="text-muted">
+            Must be at least 8 characters
+          </Form.Text>
+        </Form.Group>
+        <Button variant="warning" type="submit">
+          Create account
+        </Button>
+        <br/>
+        <Form.Text className="text-muted">
+            Already have an account? <a href="#" className="primary text-decoration-none">Log in</a>
+           
+          </Form.Text>
+           
+      </Form>
+    </div>
+  );
 }

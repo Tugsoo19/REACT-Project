@@ -1,9 +1,9 @@
 import AliceCarousel from "react-alice-carousel";
 import { brands, profiles, warranty } from "../../data/warranty";
 
-const delivery = warranty.map((el) => {
+const delivery = warranty.map((el, index) => {
   return (
-    <div className="d-flex gap-4">
+    <div className="d-flex gap-4" key={index}>
       <img src={el.icon}></img>
       <div className="warranty-text">
         <p>{el.title}</p>
@@ -13,9 +13,9 @@ const delivery = warranty.map((el) => {
   );
 });
 
-const ThreeProfile = profiles.map((el) => {
+const ThreeProfile = profiles.map((el, index) => {
   return (
-    <div className="profiles border rounded-4 mx-1">
+    <div className="profiles border rounded-4 mx-1" key={index}>
       <img src={el.profile}></img>
       <a>{el.name}</a>
       <p>{el.text}</p>
@@ -23,8 +23,8 @@ const ThreeProfile = profiles.map((el) => {
   );
 });
 
-const brandLogos = brands.map((el) => {
-  return <img src={el.logo} className="logo"></img>;
+const brandLogos = brands.map((el, index) => {
+  return <img src={el.logo} className="logo" key={index}></img>;
 });
 
 export default function WarrantyProfilesBrand() {
