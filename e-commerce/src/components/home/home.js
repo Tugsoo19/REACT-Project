@@ -14,12 +14,11 @@ import LatestProdFunc from "./LatestProducts";
 
 
 
-const Home = () => {
-    const [wishlist, setWishlist] = useState(0);
+const Home = (props) => {
 
-  const images = carouselData.map((data) => {
+  const images = carouselData.map((data, index) => {
     return (
-      <div className="carousel">
+      <div className="carousel" key={index}>
         <div className="carousel-left">
           <p className="carousel-title">{data.title}</p>
           <button className="carousel-button1">{data.button1}</button>
@@ -33,15 +32,18 @@ const Home = () => {
     );
   });
 
-  const popularProds = popular.map((el) => {
+  const popularProds = popular.map((el, index) => {
     return (
       <PopularProdsFunc
+        key = {index}
+        id = {el.id}
         image={el.image}
         title={el.title}
         price={el.price}
         stars={el.stars}
-        wishlist={wishlist}
-        setWishlist={setWishlist}
+        wishlist={props.wishlist}
+        setWishlist={props.setWishlist}
+        
       />
     );
   });

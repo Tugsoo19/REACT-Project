@@ -5,7 +5,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 1
+        stars: 1,
+        id:1,
 
     },
     {
@@ -14,7 +15,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 2
+        stars: 2,
+        id:2,
 
     },
     {
@@ -23,7 +25,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 3
+        stars: 3,
+        id:3,
 
     },
     {
@@ -32,7 +35,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 4
+        stars: 4,
+        id:4,
 
     },
     {
@@ -41,7 +45,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 1
+        stars: 1,
+        id:5,
 
     },
     {
@@ -50,7 +55,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 2
+        stars: 2,
+        id:6,
 
     },
     {
@@ -59,7 +65,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 3
+        stars: 3,
+        id:7,
 
     },
     {
@@ -68,7 +75,8 @@ const popular = [
         price: "$11.7",
         icon1: 'images/like2.png',
         icon2: "images/shopcart2.png",
-        stars: 4
+        stars: 4,
+        id:8,
 
     },
 

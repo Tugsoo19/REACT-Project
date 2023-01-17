@@ -342,6 +342,8 @@ body {
   width: 400px;
   right: 50px;
   background-color: #87bcd9;
+  z-index: 1;
+  top: 150px;
 }
 
 .liked {

@@ -11,14 +11,17 @@ import { Link } from 'react-router-dom'
 
 export default function MainMenu(props) {
   const [show, setShow] = useState(false);
+  console.log('MainMenu', props.wishlist)
 
-  const browseMenu = categories.map((el) => {
-    return <BrowseCategories title={el.title} children={el.children} />;
+  const browseMenu = categories.map((el, index) => {
+    return <BrowseCategories key={index}
+      title={el.title} children={el.children} />;
   });
 
-  const subMenus = menus.map((subMenu) => {
+  const subMenus = menus.map((subMenu, index) => {
     return (
       <SubMenu
+        key={index}
         title={subMenu.title}
         position={subMenu.position}
         children={subMenu.children}
@@ -38,23 +41,21 @@ export default function MainMenu(props) {
             <button type="submit">Search</button>
           </form>
           <div className="login-left">
-            <div>
-              <img src="images/user.svg" onClick={() => {
-              <Link to={'/signup'}></Link>
 
-            }}></img>
-              <a>Sign in</a>
-            </div>
-            <div onClick={() => setShow(true)}>
-              <img src="images/like.svg"></img>
-
-              <Badge pill bg="warning">
-                {props.wishlist}
-              </Badge>
-              {show ? (
+            <img src="images/user.svg" />
+            <Link to={'/signup'}>Sign in</Link>
+            {show ? (
                 <div className="wish border border-5 ">
                   <h5>Wishlist</h5>
-                  {props.addWishlist}
+                  {props.wishlist.map((w) => {
+                    return (
+                      <div>
+                        <p>{w.productId}</p>
+                        <img src={w.productImage} />
+                      </div>
+
+                    )
+                  })}
 
                   <hr></hr>
                   <button onClick={() => setShow(false)}>Close</button>
@@ -62,6 +63,13 @@ export default function MainMenu(props) {
               ) : (
                 ""
               )}
+            <div onClick={() => setShow(true)}>
+              <img src="images/like.svg"></img>
+
+              <Badge pill bg="warning">
+                {props.wishlist.length}
+              </Badge>
+              
             </div>
             <div>
               <img src="images/shopping-cart.svg"></img>

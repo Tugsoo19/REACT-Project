@@ -2,14 +2,17 @@ import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 // import {heart} from 'react-bootstrap-icons/dist/icons'
 import { BsSuitHeartFill } from 'react-icons/bs';
-import {BsSuitHeart} from 'react-icons/bs'
-import {BiCart} from 'react-icons/bi'
+import { BsSuitHeart } from 'react-icons/bs'
+import { BiCart } from 'react-icons/bi'
 
 export default function PopularProdsFunc(props) {
   const [like, setLike] = useState(false)
-  const [addWishlist, setAddWishlist] = useState([])
-  let p = [];
-  
+  // console.log('PopularProducs', props.wishlist)
+  // console.log(props)
+  // wishlist = [{productId: 1, isChecked: false}, {}]
+  // const [addWishlist, setAddWishlist] = useState([])
+  // let p = [];
+
 
   return (
     <div className="popular">
@@ -17,15 +20,22 @@ export default function PopularProdsFunc(props) {
         <div className="pop-top d-flex justify-content-center">
           <img src={props.image} className="pop-image"></img>
           <BsSuitHeart className="pop-like" onClick={() => {
-            props.setWishlist(props.wishlist + 1)
             setLike(true)
-            
-            console.log(props.target.value);
-
-          }}/>
+            const likedProduct = {
+              productId: props.id,
+              productImage : props.image,
+              isLiked: true
+            }
+            // console.log(likedProduct)
+            // console.log(props.setWishlist)
+            props.setWishlist([...props.wishlist, likedProduct])
+            console.log(props.wishlist)
+            // console.log(props.target.value);
+          }} />
           {like ? <BsSuitHeartFill className="liked" onClick={() => {
-            props.setWishlist(props.wishlist - 1)
             setLike(false)
+            props.setWishlist(props.wishlist.filter(w => w.productId != props.id))
+
           }} /> : ""}
         </div>
 
@@ -37,7 +47,7 @@ export default function PopularProdsFunc(props) {
           </div>
 
           {/* <img src={props.icon2} className="pop-cart"></img> */}
-          <BiCart className="pop-cart"/>
+          <BiCart className="pop-cart" />
 
         </div>
       </div>

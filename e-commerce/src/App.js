@@ -9,7 +9,7 @@ import { useState } from "react";
 import SignUp from "./components/SignUp";
 
 function App() {
-  const [wishlist, setWishlist] = useState(0);
+  const [wishlist, setWishlist] = useState([]);
   
   return (
     <div className="App">
@@ -20,7 +20,7 @@ function App() {
         <MainMenu wishlist={wishlist} />
       </div>
       <Routes>
-        <Route path='/' element = {<Home/>}/>
+        <Route path='/' element = {<Home wishlist={wishlist} setWishlist={setWishlist}/>} />
         <Route path='/signup' element={<SignUp/>} />
       </Routes>
       
