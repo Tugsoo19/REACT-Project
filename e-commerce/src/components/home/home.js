@@ -35,22 +35,22 @@ const Home = (props) => {
   const popularProds = popular.map((el, index) => {
     return (
       <PopularProdsFunc
-        key = {index}
-        id = {el.id}
+        key={index}
+        id={el.id}
         image={el.image}
         title={el.title}
         price={el.price}
         stars={el.stars}
         wishlist={props.wishlist}
         setWishlist={props.setWishlist}
-        
+
       />
     );
   });
 
-  return(
+  return (
     <div>
-        <div className="FirstCarousel">
+      <div className="FirstCarousel">
         <AliceCarousel autoPlay autoPlayInterval="3000">
           {images}
         </AliceCarousel>
@@ -68,18 +68,18 @@ const Home = (props) => {
           <div className="pop-items d-flex my-4 justify-content-between">
             {popularProds}
           </div>
-          <div className="pop-items d-flex my-4 justify-content-between">
+          {/* <div className="pop-items d-flex my-4 justify-content-between">
             {popularProds}
           </div>
           <div className="pop-items d-flex my-4 justify-content-between">
             {popularProds}
-          </div>
+          </div> */}
         </AliceCarousel>
       </div>
 
       <SaleBanner />
       <ThreeProds />
-      <WarrantyProfilesBrand/>
+      <WarrantyProfilesBrand />
       <div className="d-flex justify-content-between align-items-center my-5">
         <a className="section-title">Latest news</a>
         <a href="#" className="more-link">
@@ -93,7 +93,7 @@ const Home = (props) => {
     </div>
   )
 
-  
+
 }
 
 export default Home;

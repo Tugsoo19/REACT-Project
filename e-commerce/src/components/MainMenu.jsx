@@ -13,7 +13,7 @@ import CloseButton from "react-bootstrap/CloseButton";
 export default function MainMenu(props) {
   const [show, setShow] = useState(false);
 
-  console.log("MainMenu", props.wishlist);
+  // console.log("MainMenu", props.wishlist);
 
   const browseMenu = categories.map((el, index) => {
     return (
@@ -62,7 +62,12 @@ export default function MainMenu(props) {
                         <p>Price: {w.productPrice}</p>
                         <button className="addcart">Add to cart</button>
                       </div>
-                      <CloseButton />
+                      <CloseButton onClick={() => {
+                        console.log(w.productId);
+                        props.setWishlist(
+                          props.wishlist.filter(wish => wish.productId !== w.productId)
+                        )
+                      }} />
                     </div>
                   );
                 })}
