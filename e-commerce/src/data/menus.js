@@ -34,7 +34,7 @@ const menus = [
     position: 1,
     children: [
       {
-        title: "Home Children 1",
+        title: "All category",
         position: 1,
       },
       {

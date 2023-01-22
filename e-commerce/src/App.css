@@ -349,6 +349,7 @@ body {
 .wish {
   position: absolute;
   width: 400px;
+  height: 400px;
   right: 50px;
   background-color: white;
   z-index: 1;
@@ -357,6 +358,7 @@ body {
   border: #1b5a7d solid 2px;
   text-align: center;
   color: #003f62;
+  overflow-y: scroll;
 }
 
 .liked {

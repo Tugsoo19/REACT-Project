@@ -38,9 +38,10 @@ export default function MainMenu(props) {
     <div>
       <div className="MainMenu">
         <div className="Container">
-          <div className="logo">
-            <img src="images/logo.png"></img>
-          </div>
+          <Link to={"/"}>
+            <img src="images/logo.png" className="logo"></img>
+          </Link>
+
           <form className="searchField">
             <input type="text" placeholder="Search any things" />
             <button type="submit">Search</button>
@@ -62,18 +63,27 @@ export default function MainMenu(props) {
                         <p>Price: {w.productPrice}</p>
                         <button className="addcart">Add to cart</button>
                       </div>
-                      <CloseButton onClick={() => {
-                        console.log(w.productId);
-                        props.setWishlist(
-                          props.wishlist.filter(wish => wish.productId !== w.productId)
-                        )
-                      }} />
+                      <CloseButton
+                        onClick={() => {
+                          console.log(w.productId);
+                          props.setWishlist(
+                            props.wishlist.filter(
+                              (wish) => wish.productId !== w.productId
+                            )
+                          );
+                        }}
+                      />
                     </div>
                   );
                 })}
 
                 <hr></hr>
-                <button className="border-2 rounded-3" onClick={() => setShow(false)}>Close</button>
+                <button
+                  className="border-2 rounded-3"
+                  onClick={() => setShow(false)}
+                >
+                  Close
+                </button>
               </div>
             ) : (
               ""
